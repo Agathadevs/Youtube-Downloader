@@ -26,7 +26,7 @@ show.pack()
 def download():
     try:
         yt = YouTube(linken.get())
-        video = yt.streams.get_by_resolution("720p")
+        video = yt.streams.get_highest_resolution()
         video.download()
         show.config(text="下載成功!",font="微軟正黑體 8")
         show.pack()
