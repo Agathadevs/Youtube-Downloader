@@ -25,7 +25,6 @@ show.pack()
 
 def download():
     try:
-        
         yt = YouTube(linken.get())
         video = yt.streams.get_by_resolution("720p")
         video.download()
