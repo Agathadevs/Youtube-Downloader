@@ -6,11 +6,10 @@ win.title("converter")
 win.geometry("400x200+600+300")
 win.config(background="#323232")
 win.attributes("-alpha",0.75)
-win.resizable(False,False)
 
 
 title_text=Label(text="converter",fg="skyblue",bg="#323232")
-#obj.config(font="字形 大小")
+
 title_text.config(font="微軟正黑體 15")
 title_text.pack()
 
@@ -31,7 +30,7 @@ def download():
         show.config(text="下載成功!",font="微軟正黑體 8")
         show.pack()
     except Exception as error:
-        show.config(text=f"ERROR: {error}",fg="#da0200",bg="#323232",font="微軟正黑體 8")
+        show.config(text=f"錯誤訊息:{error}",fg="#da0200",bg="#323232",font="微軟正黑體 8")
         show.pack()
 btn=Button(text="下載",command=download)
 btn.pack()
